@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="common" template="/WEB-INF/layout/classic.jsp">
+		<put-attribute name="body" value="" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+
+	<definition name="frontend/index" extends="common">
+		<put-attribute name="title" value="Home || Bidding" />
+		<put-attribute name="body" value="/WEB-INF/jsp/frontend/index.jsp" />
+	</definition>
+	
+	<definition name="user/adduser" extends="common">
+		<put-attribute name="title" value="Add User || Bidding" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user/adduser.jsp" />
+	</definition>
+	
+	<definition name="product/addproduct" extends="common">
+		<put-attribute name="title" value="Add Product || Bidding" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/product/addproduct.jsp" />
+	</definition>
+	
+	<definition name="bid/addbid" extends="common">
+		<put-attribute name="title" value="Add Bid || Bidding" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/bid/addbid.jsp" />
+	</definition>
+	
+	<definition name="user/allUser" extends="common">
+		<put-attribute name="title" value="All User || Bidding" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/user/alluser.jsp" />
+	</definition>
+	
+	<definition name="product/allproduct" extends="common">
+		<put-attribute name="title" value="All products || Bidding" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/product/allproduct.jsp" />
+	</definition>
+	
+	<definition name="frontend/productdetails" extends="common">
+		<put-attribute name="title" value="Home || Bidding" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/frontend/productdetails.jsp" />
+	</definition>
+	
+	<definition name="bid/mybid" extends="common">
+		<put-attribute name="title" value="Home || Bidding" />
+		<put-attribute name="navigation" value="/WEB-INF/jsp/basic/navbar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/bid/mybid.jsp" />
+	</definition>
+	
+</tiles-definitions>

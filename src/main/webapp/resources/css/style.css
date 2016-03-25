@@ -1,0 +1,187 @@
+@CHARSET "ISO-8859-1";
+
+/*---------- CSS by Krishna Karki --------------- */
+/*---------- general CSS style -----------*/
+body{
+	margin: auto;
+	padding:auto;
+}
+.header{
+	border-top: 50px solid #4EADD8;
+	font-family: sans-serif;
+	font-size: 16px;
+	background-color: #4EADD8;
+	text-align: right;
+	border-bottom: 10px solid #4EADD8;
+}
+.header a{
+	text-decoration: none;
+	margin: 5px;
+	padding: 10px;
+	color: #FFFFFF;
+}
+.menu{
+	width: 1024px;
+	height: 60px;
+	background-color: #E8F2FE;
+	margin: auto;
+	padding: atuo:
+}
+.menu .link {
+	padding: 10px;
+	margin: 10px;
+	float: right;
+	background-color: #4EADD8;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+}
+.menu .link a {
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+.menu .link a:HOVER {
+	text-decoration:underline;
+}
+.footer{
+	width: 1004px;
+	padding: 10px;
+	background-color: #E8F2FE;
+	font-family: sans-serif;
+	font-size: 16px;
+	border-top: 50px solid #E8F2FE;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	margin:auto;
+	text-align: center;
+}
+
+/*------------- form Body and form input ---------------*/
+
+.formBody{
+	margin: auto;
+	padding: 20px;;
+	width: 982px;
+	border: 1px solid gray;
+	height: auto;
+	overflow: auto;
+}
+.formBody table{
+	width: 980px;
+	background-color: #F0F0F0;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	padding:10px;
+	text-align: left;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+.row{
+	padding: 3px;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+.row:HOVER{
+	background-color: #F1F1F1;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	
+}
+.row .formLebel{
+	margin: 10px;
+}
+.row .formInput{
+	margin: 10px;
+}
+.row .formInput input{
+	height: 30px;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+.row .formInput textarea{
+	height: 80px;
+	width: 400px;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+.row .formInput submit{
+	height: 30px;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+.row .formError{
+	margin: 10px;
+	color: red;
+}
+
+/* ---------------- Product list ------------------- */
+
+.product-list{
+	width: 1024px;
+	padding: 5px;
+	margin: auto;
+	background-color:#FFFFFF;
+	height: auto;
+	overflow: auto;
+}
+.product{
+	border: 1px solid #DDDDDD;
+	font-family: sans-serif;
+	font-size: 16px;
+	width: 31%;
+	float: left;
+	margin: 10px;
+	border-top-left-radius:0px;
+	border-top-right-radius:20px;
+	border-bottom-right-radius:20px;
+	border-bottom-left-radius:20px;
+	height: auto;
+}
+.product:HOVER{
+	background-color: #F1F1F1;
+}
+.product-image{
+	padding: 5px;
+}
+.product-image img{
+	width: 305px;
+	height: 200px;
+	border: 0px solid black;
+}
+.product-name{
+	padding: 5px;	
+}
+.product-description {
+	padding: 5px;
+}
+.product-initial-price {
+	padding: 5px;
+}
+.product-end-date {
+	padding: 5px;
+}
+.product-bit-now {
+	margin: 5px;
+	padding: 5px;
+	width: 60px;
+	height: 25px;
+	background-color: #4EADD8;
+	text-align: center;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	border-bottom-left-radius:5px;
+}
+.product-bit-now a{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+.product-bit-now a:HOVER{
+	text-decoration: underline;
+}
+

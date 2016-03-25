@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<http>
+		<intercept-url pattern="/user/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/product/add" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/product" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/bid/**" access="hasRole('ROLE_USER')" />
+		
+		<form-login default-target-url="/login-success" />
+		<logout  logout-success-url="/" />
+		<csrf disabled="true" />
+	</http>
+	
+	
+	<authentication-manager>
+		<!-- <authentication-provider>
+		<password-encoder  hash="bcrypt"/>
+			<user-service>
+				<user name="user" password="$2a$10$znN80C2Uu8yg7wlOuJ3g9.lg/l.yCt3i9Uy4Q4qKVEcpEPjeV/Wa." authorities="ROLE_USER" />
+				<user name="admin" password="$2a$10$znN80C2Uu8yg7wlOuJ3g9.lg/l.yCt3i9Uy4Q4qKVEcpEPjeV/Wa." authorities="ROLE_ADMIN" />
+				<user name="admin" password="admin" authorities="ROLE_ADMIN" />
+				<user name="super" password="$2a$10$znN80C2Uu8yg7wlOuJ3g9.lg/l.yCt3i9Uy4Q4qKVEcpEPjeV/Wa." authorities="ROLE_USER,ROLE_ADMIN" />
+			</user-service>
+		</authentication-provider> -->
+
+		<authentication-provider>
+		<password-encoder hash="bcrypt"/>
+			<jdbc-user-service data-source-ref="dataSource" 
+			users-by-username-query="SELECT userName, userPassword, id FROM user WHERE userName = ?"
+				authorities-by-username-query="SELECT userName, userRole FROM user WHERE userName = ?"/>
+		</authentication-provider>
+
+	</authentication-manager>
+
+</beans:beans>
